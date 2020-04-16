@@ -1,0 +1,13 @@
+<header>
+    <nav>
+        <ul>
+            <a href="http://localhost:3000"><li>Home</li></a>
+        <% if current_user.present? %>
+            <a href="<%= destroy_user_session_path %>"><li>Logout</li></a>
+        <% else %>
+            <a href="http://localhost:3000/users/sign_in"><li>Login</li></a>
+            <a href="http://localhost:3000/users/sign_up"><li>Signup</li></a>
+        <% end %>
+        </ul>
+    </nav>
+</header>
